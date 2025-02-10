@@ -19,12 +19,14 @@ app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const pythonScriptPath = path.join(__dirname, 'python', 'extract_text.py');
-let pythonPath;
-if (process.platform === 'win32') {
-  pythonPath = path.join(__dirname, 'venv', 'Scripts', 'python');
-} else {
-  pythonPath = path.join(__dirname, 'venv', 'bin', 'python');
-}
+// let pythonPath;
+// if (process.platform === 'win32') {
+//   pythonPath = path.join(__dirname, 'venv', 'Scripts', 'python');
+// } else {
+//   pythonPath = path.join(__dirname, 'venv', 'bin', 'python');
+// }
+const pythonPath = 'python3';
+
 
 // if (process.env.NODE_ENV === 'production') {
 //   app.use(express.static(path.join(__dirname, "../dist")));
