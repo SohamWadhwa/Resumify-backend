@@ -26,14 +26,14 @@ if (process.platform === 'win32') {
   pythonPath = path.join(__dirname, 'venv', 'bin', 'python');
 }
 
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, "../dist")));
+// if (process.env.NODE_ENV === 'production') {
+//   app.use(express.static(path.join(__dirname, "../dist")));
   
-  // For any other routes, serve index.html (React Router will handle routing)
-  app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../dist", "index.html"));
-  });
-}
+//   // For any other routes, serve index.html (React Router will handle routing)
+//   app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "../dist", "index.html"));
+//   });
+// }
 
 
 const storage = multer.diskStorage({
