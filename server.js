@@ -64,6 +64,7 @@ app.post("/upload", upload.single("resume"), (req, res) => {
   console.log("MIME Type:", mimeType);
 
   // res.json({ message: "File uploaded successfully", file: req.file });
+  console.log("Executing script:", pythonPath, pythonScriptPath, filePath);
 
   exec(
     `"${pythonPath}" "${pythonScriptPath}" "${filePath}"`,
